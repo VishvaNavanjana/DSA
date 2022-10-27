@@ -14,4 +14,9 @@ public class StackImplementation {
         q1.add(n);
     }
 
+    public int pop(){
+        if(q1.isEmpty()) return -1;
+        else return 1;
+    }
+
 }
