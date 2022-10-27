@@ -19,4 +19,17 @@ class StackImplementationTest {
         var stackImp = new StackImplementation();
         assertEquals(-1,stackImp.pop());
     }
+
+    @Test
+    void twoPopOperationsTesting() {
+        //34,234,6,-345,64
+        var stackImp = new StackImplementation();
+        stackImp.push(34);
+        stackImp.push(234);
+        stackImp.push(6);
+        stackImp.push(-345);
+        stackImp.push(64);
+        assertEquals(64,stackImp.pop());
+        assertEquals(-345,stackImp.pop());
+    }
 }

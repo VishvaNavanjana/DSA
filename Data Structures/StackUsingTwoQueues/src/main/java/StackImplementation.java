@@ -16,7 +16,19 @@ public class StackImplementation {
 
     public int pop(){
         if(q1.isEmpty()) return -1;
-        else return 1;
+
+        while(q1.size() != 1){
+            q2.add(q1.remove());
+        }
+
+        int pop = q1.remove();
+
+        //Swap two queues
+        Queue<Integer> temp = q2;
+        q2 = q1;
+        q1 = temp;
+
+        return  pop;
     }
 
 }
